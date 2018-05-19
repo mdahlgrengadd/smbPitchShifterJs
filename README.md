@@ -31,3 +31,6 @@ Example html that uses react is in the making. Should be possible to just "npm i
 - Use web audio for file loading instead of libsndfile
 - Add SDL for samplerate conversion and maybe playback too? (SDL is included with emscripten).
 - Create nice pitch/stretch wrapper API for javacript.
+
+## Links
+[http://www.katjaas.nl/pitchshift/pitchshift.html](http://www.katjaas.nl/pitchshift/pitchshift.html)

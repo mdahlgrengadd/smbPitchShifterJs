@@ -1,6 +1,6 @@
 # smbPitchShifterJs
 
-Stephan Bernsee's [http://blogs.zynaptiq.com/bernsee/pitch-shifting-using-the-ft/](code) compiled to javascript using emscripten. This version is using libsndfile for file loading (will be replaced with web audio) and libsamplerate to allow timestretching.
+Stephan Bernsee's [http://blogs.zynaptiq.com/bernsee/pitch-shifting-using-the-ft/](code) compiled to javascript using emscripten. This version is using libsndfile for file loading (will be replaced with web audio) and libsamplerate to allow timestretching (might also be replaced, SDL or webaudio).
 
 ## Disclaimer
 This readme is written for me to jog my memory. The code is not yet intended to be useful to anybody else. 

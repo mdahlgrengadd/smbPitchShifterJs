@@ -1,0 +1,133 @@
+<html>
+    <head>
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+            <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+<div class="container-fluid">
+  <div class="row-fluid">
+  <div class="span12">
+        <script type='text/javascript'>
+
+      
+            var Module = {
+              preRun: [],
+              postRun: [],
+
+              printErr: function(text) {
+                if (arguments.length > 1) text = Array.prototype.slice.call(arguments).join(' ');
+                if (0) { // XXX disabled for safety typeof dump == 'function') {
+                  dump(text + '\n'); // fast, straight to the real console
+                } else {
+                  console.error(text);
+                }
+              },
+
+              setStatus: function(text) {
+                if (!Module.setStatus.last) Module.setStatus.last = { time: Date.now(), text: '' };
+                if (text === Module.setStatus.text) return;
+                var m = text.match(/([^(]+)\((\d+(\.\d+)?)\/(\d+)\)/);
+                var now = Date.now();
+                if (m && now - Date.now() < 30) return; // if this is a progress update, skip it if too soon
+                if (m) {
+                  text = m[1];
+                  //progressElement.value = parseInt(m[2])*100;
+                  //progressElement.max = parseInt(m[4])*100;
+                  //progressElement.hidden = false;
+                  //spinnerElement.hidden = false;
+                } else {
+                  //progressElement.value = null;
+                  //progressElement.max = null;
+                  //progressElement.hidden = true;
+                  //if (!text) spinnerElement.style.display = 'none';
+                }
+                //statusElement.innerHTML = text;
+              },
+              totalDependencies: 0,
+              monitorRunDependencies: function(left) {
+                this.totalDependencies = Math.max(this.totalDependencies, left);
+                Module.setStatus(left ? 'Preparing... (' + (this.totalDependencies-left) + '/' + this.totalDependencies + ')' : 'All downloads complete.');
+              }
+            };
+            Module.setStatus('Downloading...');
+            window.onerror = function(event) {
+              // TODO: do not warn on ok events like simulating an infinite loop or exitStatus
+              Module.setStatus('Exception thrown, see JavaScript console');
+              //spinnerElement.style.display = 'none';
+              Module.setStatus = function(text) {
+                if (text) Module.printErr('[post-exception status] ' + text);
+              };
+            };
+          </script>
+          <script async type="text/javascript" src="phasevocoder.js"></script>
+  <script type="text/javascript" src="dist/main.js"></script>
+      <div class="page-header">
+  
+        <h2>Modplayer (OpenMPT/Chiptune2.js) synced with Wavesjs</h2>
+      <p>This example shows a *scheduled* `AudioTimeEngine` playing a mod file.</p>
+      </div>
+          
+      <div class="carousel slide" id="myCarousel">
+          <div class="carousel-inner">
+              <div class="item active">
+                      <ul class="thumbnails">
+                          <li class="span3">
+                            <div id="demo-contents0"></div>
+  
+                              <div class="caption">
+                                  <h4>Channel 1</h4>
+                                <div id="controls-container0"></div>
+                          <p>      <div id="metadata" class="banner">
+          <span id="title">nothing loaded</span>
+          <span id="artist"></span>
+        </div></p>
+                                  <a class="btn btn-mini" href="#">&raquo; Settings</a>
+                              </div>
+                          </li>
+                          <li class="span3">
+                            <div id="demo-contents1"></div>
+  
+                              <div class="caption">
+                                  <h4>Channel 2</h4>
+                                <div id="controls-container1"></div>
+                          <p></p>
+                                  <a class="btn btn-mini" href="#">&raquo; Settings</a>
+                              </div>
+                          </li>
+                          <li class="span3">
+                            <div id="demo-contents2"></div>
+  
+                              <div class="caption">
+                                  <h4>Channel 3</h4>
+                                <div id="controls-container2"></div>
+                          <p></p>
+                                  <a class="btn btn-mini" href="#">&raquo; Settings</a>
+                              </div>
+                          </li>
+                          <li class="span3">
+                            <div id="demo-contents3"></div>
+  
+                              <div class="caption">
+                                  <h4>Channel 4</h4>
+                                <div id="controls-container3"></div>
+                          <p></p>
+                                  <a class="btn btn-mini" href="#">&raquo; Settings</a>
+                              </div>
+                          </li>
+                      </ul>
+                </div> 
+   
+          </div>
+          
+          <div class="control-box">                            
+              <a data-slide="prev" href="#myCarousel" class="carousel-control left">‹</a>
+              <a data-slide="next" href="#myCarousel" class="carousel-control right">›</a>
+          </div><!-- /.control-box -->   
+                                
+      </div><!-- /#myCarousel -->
+          
+  </div><!-- /.span12 -->          
+  </div><!-- /.row --> 
+  </div><!-- /.container -->
+</body>
+</html>  

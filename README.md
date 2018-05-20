@@ -5,6 +5,9 @@ Stephan Bernsee's [http://blogs.zynaptiq.com/bernsee/pitch-shifting-using-the-ft
 ## Disclaimer
 This readme is written for me to jog my memory. The code is not yet intended to be useful to anybody else. 
 
+## Demo
+- [https://mdahlgrengadd.github.io/smbPitchShifterJs](https://mdahlgrengadd.github.io/smbPitchShifterJs)
+
 ## Compiling c/c++
 Code can be compiled with gcc for comparison with javascript. Requires [https://github.com/erikd/libsamplerate](libsamplerate ) and [https://github.com/erikd/libsndfile](libsndfile).
 ```
@@ -33,5 +36,4 @@ Example html that uses react is in the making. Should be possible to just "npm i
 - Create nice pitch/stretch wrapper API for javacript.
 
 ## Links
-- [https://mdahlgrengadd.github.io/smbPitchShifterJs](https://mdahlgrengadd.github.io/smbPitchShifterJs)
 - [http://www.katjaas.nl/pitchshift/pitchshift.html](http://www.katjaas.nl/pitchshift/pitchshift.html)

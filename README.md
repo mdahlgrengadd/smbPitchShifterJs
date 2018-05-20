@@ -33,5 +33,5 @@ Example html that uses react is in the making. Should be possible to just "npm i
 - Create nice pitch/stretch wrapper API for javacript.
 
 ## Links
-[https://mdahlgrengadd.github.io/smbPitchShifterJs/](Demo)
+[https://mdahlgrengadd.github.io/smbPitchShifterJs](Demo)
 [http://www.katjaas.nl/pitchshift/pitchshift.html](http://www.katjaas.nl/pitchshift/pitchshift.html)
